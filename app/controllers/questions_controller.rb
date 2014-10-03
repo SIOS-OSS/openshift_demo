@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
   def stream
     response.headers['Content-Type'] = 'text/event-stream'
 
-    300.times do |i|
+    3000.times do |i|
       ActiveRecord::Base.connection_pool.with_connection do
         Question.uncached do
           set_question
@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
 
       response.stream.write("event: message\n")
       response.stream.write("data: #{create_json_response.to_json}\n\n")
-      sleep 1
+      sleep 2
     end
 
     response.stream.write("event: done\n")
