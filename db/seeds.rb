@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-question.create(title: 'OpneShift Demo: 期待する Red Hat 製品は？', q_1: 'RHEL7', q_2: 'RHEV3', q_3: 'RHEL-OSP5', q_4: 'RHS3')
+Question.create([{title: 'OpneShift Demo: 期待する Red Hat 製品は？'}, {q_1: 'RHEL7'}, {q_2: 'RHEV3'}, {q_3: 'RHEL-OSP5', q_4: 'RHS3'}])
