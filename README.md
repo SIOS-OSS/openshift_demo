@@ -5,7 +5,7 @@
 
 ```bash
 $ sudo yum install -y rubygem-rhc
-$ rhc app create demo ruby-2.0 mysql-5.5 --from-source https://github.com/kazuhisya/graph_demo.git
+$ rhc app create demo ruby-2.0 mysql-5.5 --from-code https://github.com/kazuhisya/graph_demo.git
 ```
 
 
