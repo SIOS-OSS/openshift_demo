@@ -1,7 +1,7 @@
 # graph demo app
 
 
-## How to carry out OpenShift
+## Installing Client Tools
 
 - you need a `rhc` command. and get it now!
 
