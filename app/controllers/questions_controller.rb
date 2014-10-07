@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   include ActionController::Live
 
-  before_filter :basic, except: [:get_status, :show, :update, :increment]
+  before_action :basic, except: [:get_status, :show, :update, :increment, :redirect]
   before_action :set_question, only: [:stream, :get_status, :show, :streaming_graph, :edit, :update, :destroy, :increment]
 
   def redirect
