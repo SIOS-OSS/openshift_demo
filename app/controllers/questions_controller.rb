@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   include ActionController::Live
 
+  before_filter :basic, except: [:get_status, :show, :update, :increment]
   before_action :set_question, only: [:stream, :get_status, :show, :streaming_graph, :edit, :update, :destroy, :increment]
 
   def redirect
@@ -118,4 +119,11 @@ class QuestionsController < ApplicationController
         {label: @question.q_4, value: @question.q_4_count},
       ]
     end
+
+    def basic
+      authenticate_or_request_with_http_basic do |user, pass|
+        user == 'admin' && pass == 'admin'
+      end
+    end
+
 end
