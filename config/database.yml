@@ -21,5 +21,13 @@ test:
 production:
   adapter: sqlite3
   database: db/production.sqlite3
+
+  #adapter: mysql2
+  #encoding: utf8
+  #reconnect: false
+  #database: 
+  #username: 
+  #password: 
+  #host:   
   pool: 10
   timeout: 5000
