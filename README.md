@@ -18,6 +18,6 @@ $ gem install rhc
 ## Just run
 
 ```bash
-$ rhc app create demo ruby-2.0 --from-code https://github.com/SIOS-OSS/openshift_app_demo.git
+$ rhc app create demo ruby-2.0 --from-code https://github.com/SIOS-OSS/openshift_demo.git
 ```
 
